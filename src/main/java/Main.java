@@ -8,7 +8,12 @@ import lombok.extern.slf4j.Slf4j;
 public class Main {
     public static void main(String[] args) {
         int[] toSort = {3, 2, 1, 4, 7, 8, 6};
-        log.info("Before {}", toSort);
+        log.info("Before Insertion Sort {}", toSort);
         log.info("After Insertion Sort {}", InsertionSort.sort(toSort));
+
+        toSort = new int[]{3, 2, 1, 4, 7, 8, 6};
+        log.info("Before Merge Sort {}", toSort);
+        MergeSort.mergeSort(toSort);
+        log.info("After Merge Sort {}", toSort);
     }
 }
