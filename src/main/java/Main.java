@@ -15,5 +15,10 @@ public class Main {
         log.info("Before Merge Sort {}", toSort);
         MergeSort.mergeSort(toSort);
         log.info("After Merge Sort {}", toSort);
+
+        toSort = new int[]{3, 2, 1, 4, 7, 8, 6};
+        log.info("Before Quick Sort {}", toSort);
+        QuickSort.sort(toSort);
+        log.info("After Quick Sort {}", toSort);
     }
 }
