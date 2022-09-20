@@ -25,7 +25,7 @@ public class QuickSort {
     private static void sort(int[] inputArray, int firstIndex, int lastIndex){
         //termination condition of recursive call of the method. If firstIndex and lastIndex
         // are the same numbers.
-        if(firstIndex == lastIndex)
+        if(firstIndex >= lastIndex)
             return;
 
         // Define the index of pivot element. THe choice of Random pivot gives better speed execution in average.
@@ -44,7 +44,7 @@ public class QuickSort {
         sort(inputArray, firstIndex, leftPointer - 1);
 
         //Recursive call of the sort method for the right side of the array excluding current pivot
-        sort(inputArray, firstIndex + 1, lastIndex);
+        sort(inputArray, leftPointer + 1, lastIndex);
     }
 
     /**
